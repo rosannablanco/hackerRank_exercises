@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackerRank-Between_Set</title>
+  </head>
+  <body>
+    <script>
+      /*const a = [2, 4];
+      const b = [16, 32, 96];*/
+      const a = [2, 6];
+      const b = [24, 36];
+
+      function getTotalX(a, b) {
+        const lowLimit = Math.max(...a);
+        const highLimit = Math.min(...b);
+        let countMultiples = 0;
+        for (let i = lowLimit; i <= highLimit; i++) {
+          if (a.every((int) => i % int === 0) && b.every((int) => int % i === 0)) {
+            countMultiples++;
+          }
+        }
+        console.log(countMultiples);
+      }
+      getTotalX(a, b);
+    </script>
+  </body>
+</html>

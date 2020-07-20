@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackerRank-Kangaroo</title>
+  </head>
+  <body>
+    <script>
+      const x1 = 2564;
+      const v1 = 5393;
+      const x2 = 5121;
+      const v2 = 2836;
+
+      function kangaroo(x1, v1, x2, v2) {
+        let i = 0;
+        do {
+          x1 += v1;
+          x2 += v2;
+          i++;
+        } while (x1 != x2 && i < 10000);
+        let message = x1 === x2 ? 'YES' : 'NO';
+
+        console.log(message);
+      }
+      kangaroo(x1, v1, x2, v2);
+    </script>
+  </body>
+</html>

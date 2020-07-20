@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackerRank-Birthday_Cake_Candles</title>
+  </head>
+  <body>
+    <script>
+      let candlesHeight = [3, 2, 1, 3];
+      let counter = 0;
+
+      function birthdayCakeCandles(ar) {
+        let maxHeight = Math.max(...ar);
+        for (let i = 0; i < ar.length; i++) {
+          if (ar[i] === maxHeight) {
+            counter++;
+          }
+        }
+        console.log(counter);
+      }
+
+      birthdayCakeCandles(candlesHeight);
+    </script>
+  </body>
+</html>

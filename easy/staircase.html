@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackerRank-Staircase</title>
+  </head>
+  <body>
+    <script>
+      function stairCase(n) {
+        let filled = new Array(n).fill(' ');
+        while (filled.indexOf(' ') !== -1) {
+          filled.shift();
+          filled.push('#');
+          console.log(filled.join(''));
+        }
+      }
+      stairCase(6);
+    </script>
+  </body>
+</html>

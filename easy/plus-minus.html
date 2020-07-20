@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackerRank-Plus_Minus</title>
+  </head>
+  <body>
+    <script>
+      let matrix = [-4, 3, -9, 0, 4, 1];
+      function plusMinus(arr) {
+        const lengthArray = arr.length;
+        let positiveNumber = [];
+        let zeroNumber = [];
+        let negativeNumber = [];
+        for (let i = 0; i < lengthArray; i++) {
+          if (arr[i] > 0) {
+            positiveNumber.push(arr[i]);
+          }
+          if (arr[i] < 0) {
+            negativeNumber.push(arr[i]);
+          }
+          if (arr[i] === 0) {
+            zeroNumber.push(arr[i]);
+          }
+        }
+        console.log(positiveNumber.length / lengthArray);
+        console.log(negativeNumber.length / lengthArray);
+        console.log(zeroNumber.length / lengthArray);
+      }
+      plusMinus(matrix);
+    </script>
+  </body>
+</html>

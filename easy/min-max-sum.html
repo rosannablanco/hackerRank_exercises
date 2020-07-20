@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackerRank-Mini_Max_Sum</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 2, 3, 4, 5];
+
+      function minMaxSum(arr) {
+        let minSort = arr.sort((a, b) => a - b).slice();
+        let maxSort = minSort.slice().reverse();
+
+        let sumMin = 0;
+        let sumMax = 0;
+        for (let i = 0; i < minSort.length - 1; i++) {
+          sumMin += minSort[i];
+          sumMax += maxSort[i];
+        }
+        console.log(sumMin, sumMax);
+      }
+      minMaxSum(arr);
+    </script>
+  </body>
+</html>

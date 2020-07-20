@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackerRank-Apples_Oranges</title>
+  </head>
+  <body>
+    <script>
+      let s = 7;
+      let t = 11;
+      let a = 5;
+      let b = 15;
+
+      let apples = [-2, 2, 1];
+      let oranges = [5, -6];
+
+      function countApplesAndOranges(s, t, a, b, apples, oranges) {
+        let applesFalled = apples
+          .map((apple) => a + apple)
+          .filter((apple) => {
+            return apple >= s && apple <= t;
+          });
+
+        let orangesFalled = oranges
+          .map((orange) => b + orange)
+          .filter((orange) => {
+            return orange >= s && orange <= t;
+          });
+        console.log(applesFalled.length);
+        console.log(orangesFalled.length);
+      }
+      countApplesAndOranges(s, t, a, b, apples, oranges);
+    </script>
+  </body>
+</html>
