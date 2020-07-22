@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackerRank-Birthday_Chocolate</title>
+  </head>
+  <body>
+    <script>
+      /* let s = [2, 2, 1, 3, 2]; 
+      let s = [1, 1, 1, 1, 1, 1];*/
+      let s = [1, 2, 1, 3, 2];
+      let d = 3;
+      let m = 2;
+
+      function birthday(s, d, m) {
+        let count = 0;
+        let copyS = [];
+        for (let i = 0; i < s.length; i++) {
+          let sum = 0;
+          copyS = s.slice(i, i + m);
+          for (let j = 0; j < copyS.length; j++) {
+            sum += copyS[j];
+          }
+          if (sum === d) {
+            count += 1;
+          }
+        }
+        return count;
+      }
+      birthday(s, d, m);
+    </script>
+  </body>
+</html>
