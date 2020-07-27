@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackerRank-Migratory_irds</title>
+  </head>
+  <body>
+    <script>
+      const arr = [1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4];
+      /*const arr = [1, 4, 4, 4, 5, 3];
+       const arr = [1, 1, 2, 2, 3]; 
+      const arr = [2, 5, 2, 5, 5, 5, 2, 2, 5, 5, 5, 1, 5, 2, 2, 2, 2, 2, 2, 2, 5, 5, 1, 5, 2, 5, 5, 2, 2, 2, 5, 5, 5, 5, 5, 5, 5, 5];*/
+
+      function migratoryBirds(arr) {
+        let counter = 1;
+        let counterType = [];
+        let type = [];
+        let i = 0;
+        arr.sort();
+
+        for (let j = i + 1; j <= arr.length; j++) {
+          if (arr[i] === arr[j]) {
+            counter++;
+          } else {
+            type.push(arr[i]);
+            counterType.push(counter);
+            counter = 1;
+          }
+          i = j;
+        }
+        const MaxCount = Math.max(...counterType);
+        const index = counterType.indexOf(MaxCount);
+        return type[index];
+      }
+
+      migratoryBirds(arr);
+    </script>
+  </body>
+</html>
