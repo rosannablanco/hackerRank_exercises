@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackerRank-Bon_Appétit</title>
+  </head>
+  <body>
+    <script>
+      const bill = [3, 10, 2, 9]; // coste por articulo
+      const k = 1; //indice del articulo que no comio Anna
+      const b = 7; //dinero que pago Anna
+
+      const totalMeal = bill.reduce((a, b) => a + b); //Total de los articulos
+      const totalMealShare = totalMeal - bill[k]; //Total articulos compartidos
+      const annaRealPay = totalMealShare / 2;
+      //Si Brian no le cobró de más a Anna, imprima Bon Appetiten una nueva línea
+      //o contrario, imprima la diferencia
+      const messagePrint = annaRealPay === b ? 'Bon Appetit' : b - annaRealPay;
+      console.log(messagePrint);
+    </script>
+  </body>
+</html>
